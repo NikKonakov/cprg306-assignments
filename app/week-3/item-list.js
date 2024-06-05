@@ -146,7 +146,7 @@ function ItemList() {
   return (
     <div>
       {items.map((item) => (
-        <Item name={item.name} category={item.category} quantity={item.quantity} />
+        <Item name={item.name} category={item.category} quantity={item.quantity}/>
       ))}
     </div>
   );
