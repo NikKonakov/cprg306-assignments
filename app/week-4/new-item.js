@@ -31,23 +31,23 @@ export function NewItem(){
         }
     }
     return(
-    <div class="m-4">
+    <div class="ml-12 mt-8">
         <form>
             <div class="flex items-center">
-                <p>Item Name: </p>
-                <input class="ml-4" placeholder="Enter item's name..."type="text" value={name} onChange={(event) => setName(event.target.value)} required></input>
+                <p class="font-thin">Item Name: </p>
+                <input class="ml-4 font-thin border-style:solid border-2 border-black rounded-lg" placeholder="Enter item's name..."type="text" value={name} onChange={(event) => setName(event.target.value)} required></input>
             </div>
             <div class="flex items-center">
-                <p>Quantity: </p>
-                <input class="ml-4"type="number" min={1} max={99} value={quantity} onChange={(event) => setQuantity(event.target.value)} required></input>
+                <p class="font-thin">Quantity: </p>
+                <input class="ml-4 font-thin text-center border-style:solid border-2 border-black rounded-lg"type="number" min={1} max={99} value={quantity} onChange={(event) => setQuantity(event.target.value)} required></input>
             </div>
             <div class="flex items-center">
-                <input class="flex items-center bg-red-100"type="text" value={categoryArray[categoryArrayIndex]} onChange={(event) => setCategory(event.target.value)} readOnly></input>
-                <button class="border-4 border-style:solid border-purple-300 mr-4 hover:border-purple-600 hover:font-bold bg-inherit active:border-purple-900"type="button"onClick={arrayIndexToLeft}>Go Left</button>
-                <button class="border-4 border-style:solid border-purple-300 mr-4 hover:border-purple-600 hover:font-bold bg-inherit active:border-purple-900" type="button" onClick={arrayIndexToRight}>Go Right</button>
+                <input class="flex items-center border-style:solid border-2 border-black rounded-lg font-thin text-center"type="text" value={categoryArray[categoryArrayIndex]} onChange={(event) => setCategory(event.target.value)} readOnly></input>
+                <button class="border-4 border-style:solid border-purple-300 mr-4 hover:border-purple-600 hover:font-bold bg-inherit active:border-purple-900 rounded-lg"type="button"onClick={arrayIndexToLeft}>Go Left</button>
+                <button class="border-4 border-style:solid border-purple-300 mr-4 hover:border-purple-600 hover:font-bold bg-inherit active:border-purple-900 rounded-lg" type="button" onClick={arrayIndexToRight}>Go Right</button>
             </div>
             <div>
-                <button class="bg-gray-200 ml-12 p-1 border-style:solid border-2 border-black hover:border-red500 hover:font-bold active:border-red-800 active:bg-purple-500" onClick={(event) => handleSubmit(event.target.onClick)}>Submit</button>
+                <button class="bg-gray-200 ml-12 p-1 border-style:solid border-2 border-black hover:border-red500 hover:font-bold active:border-red-800 active:bg-purple-500 rounded-lg" onClick={(event) => handleSubmit(event.target.onClick)}>Submit</button>
             </div>
         </form>
     </div>
