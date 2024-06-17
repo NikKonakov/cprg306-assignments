@@ -7,6 +7,7 @@ export default function Page(){
                 <li><a class="hover:font-bold hover:font-serif hover:text-indigo-900"href="/week-2">Week 2 Assignment</a></li>
                 <li><a class="hover:font-bold hover:font-serif hover:text-indigo-900"href="/week-3">Week 3 Assignment</a></li>
                 <li><a class="hover:font-bold hover:font-serif hover:text-indigo-900" href="./week-4">Week 4 Assignment</a></li>
+                <li><a href="./week-5" class="hover:font-bold hover:font-serif hover:text-indigo-900">Week 5 Assignment</a></li>
             </div>
         </main>
     );

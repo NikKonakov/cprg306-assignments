@@ -138,7 +138,7 @@ const item12 = {
 
 
 
-function ItemList() {
+export default function ItemList() {
   // <Item name={item1.name} quantity={item1.quantity} category={item1.category}></Item>
   // items.forEach(function(name, quantity, category){
   // return(<Item name={name} quantity={quantity} category={category}></Item>)
@@ -150,6 +150,4 @@ function ItemList() {
       ))}
     </div>
   );
-}
-
-export default ItemList
+};

@@ -1,6 +1,8 @@
 "use client"
 import React, {useState} from "react"
 
+
+
 export function NewItem(){
     var [name, setName] = useState("");
     var [quantity, setQuantity] = useState(1);
