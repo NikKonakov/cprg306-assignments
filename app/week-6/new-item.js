@@ -1,9 +1,10 @@
 "use client"
-import React, {useState} from "react"
+import React, {useState} from "react";
+import { appendItemsArray } from "./item-list";
 
 
 
-export function NewItem(){
+export default function NewItem(){
     var [name, setName] = useState("");
     var [quantity, setQuantity] = useState(1);
     var [categoryArrayIndex, setCategory] = useState(0);
@@ -26,7 +27,8 @@ export function NewItem(){
                 category: categoryArray[categoryArrayIndex]
             };
             console.log(`A new object has been created, with name: ${item.name}, quantity: ${item.quantity}, category: ${item.category}`);
-            alert(`Object has been created!\n{\n   Name: ${item.name}\n   Quantity: ${item.quantity}\n   Category: ${item.category}\n};`);
+            appendItemsArray(item);
+            console.log(`${item.name}, has been added to the array.`)
             setName("");
             setQuantity(1);
             setCategory(0);
@@ -55,5 +57,3 @@ export function NewItem(){
     </div>
     );
 }
-
-export default NewItem;

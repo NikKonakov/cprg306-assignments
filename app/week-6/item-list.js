@@ -4,8 +4,20 @@ import Item from "./item";
 import data from "./items.json";
 
 
+let items_array = [];
+
+//Updates and adds everything to the array from JSON file
+data.forEach(item => {
+    items_array.push(item);
+});
+
+export function appendItemsArray(item) {
+    items_array.push(item);
+};
+
+
+
 export default function ItemList(){
-    let items_array = [];
     let [sortBy="name", setSortBy] = useState();
     const sortChanger = () => {
         if (sortBy == "name"){
@@ -23,17 +35,9 @@ export default function ItemList(){
         }
         return sortBy;
     }
-    
-
-    data.forEach(item => {
-        items_array.push(item);
-    });
-
-    
-
     const [render, setRender] = useState(items_array);
-
-    return(
+    
+    return( 
         <div className="ml-8">
             <p className="text-4xl font-thin mt-4 ml-6">You are sorting by: {sortBy}</p>
             <div onClick={(event) => sortChanger(event.target.onClick)} className="border-solid bg-gradient-to-br rounded-xl border-2 w-1/4 border-gradient-to-br  text-center from-indigo-800 font-thin hover:text-black hover:font-bold mb-2 mt-2">Change Sorting</div>
