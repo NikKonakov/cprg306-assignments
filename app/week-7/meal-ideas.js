@@ -33,15 +33,22 @@ export default function MealIdeas({meal}){
     }, [meal])
 
     return(
-        <div>
-            {
-                recepies.map((recipe) => (
-                <div key={recipe.idMeal}>
-                    <p>Name: {recipe.strMeal}</p>
-                    <p>Recipe ID: {recipe.idMeal}</p>
-                    <img src={recipe.strMealThumb} alt={recipe.strMeal}></img>
-                </div>))
-            }
+        <div className="flex-1">
+            {recepies.length > 0 &&
+            
+            <div className="flex-1  overflow-y-scroll h-screen p-4 border-2 border-black rounded-xl bg-black">
+                <p className="text-3xl font-thin text-center text-yellow-700">List of fetched Recepies</p>
+                <p className="font-extralight pl-4 text-yellow-500">Scroll me!</p>
+                {
+                    recepies.map((recipe) => (
+                    <div className="border-2 rounded-sm border-yellow-950 m-4 bg-inherit" key={recipe.idMeal} >
+                        <p className="font-light text-xl text-yellow-700">Name: {recipe.strMeal}</p>
+                        <p className="font-extralight text-yellow-700">Recipe ID: {recipe.idMeal}</p>
+                        <img className="" src={recipe.strMealThumb} alt={recipe.strMeal}></img>
+                    </div>))
+                }
+            </div>}
         </div>
+    
     );
 }

@@ -11,8 +11,10 @@ export default function Page(){
     return(
         <main>
             <NewItem></NewItem>
-            <ItemList mealFunction={setMeal}></ItemList>
-            <MealIdeas meal={meal}></MealIdeas>
+            <div className="flex">
+                <ItemList mealFunction={setMeal}></ItemList>
+                <MealIdeas meal={meal}></MealIdeas>
+            </div>
         </main>
     );
 }
