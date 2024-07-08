@@ -38,8 +38,8 @@ export default function NewItem(){
     return(
     <>
         <div class="mt-4">
-            {!render ? (
-            <><div className="border-2 rounded-lg border-black w-1/12 text-center font-extralight text-yellow-500 bg-black hover:text-yellow-300 active:text-white" onClick={()=>setRender(true)}><p>Hide</p></div>
+            {render ? (
+            <><div className="border-2 rounded-lg border-black w-1/12 text-center font-extralight text-yellow-500 bg-black hover:text-yellow-300 active:text-white" onClick={()=>setRender(false)}><p>Hide</p></div>
                 <form>
                 <div class="flex items-center">
                     <p class="font-thin">Item Name: </p>
@@ -59,7 +59,7 @@ export default function NewItem(){
                 </div>
             </form></>
             ):(
-                <div className="border-2 rounded-lg border-black w-1/12 text-center font-extralight text-yellow-500 bg-black hover:text-yellow-300 active:text-white" onClick={()=>setRender(false)}><p>Show</p></div>
+                <div className="border-2 rounded-lg border-black w-1/12 text-center font-extralight text-yellow-500 bg-black hover:text-yellow-300 active:text-white" onClick={()=>setRender(true)}><p>Show</p></div>
                 )}
         </div>
     </>
